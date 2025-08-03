@@ -9,7 +9,8 @@ import Loading from '@/app/vfit/loading';
 export default function VFit() {
   const searchParams = useSearchParams();
   const image = searchParams.get('item');
-  const url = 'https://dsru466g0fylrq-5000.proxy.runpod.net/try_dual';
+  // const url = 'https://dsru466g0fylrq-5000.proxy.runpod.net/try_dual';
+  const url = '/api/tryon';
   const [modelImageFile, setModelImageFile] = useState<File | null>(null);
   const [outputImage, setOutputImage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -61,14 +62,10 @@ export default function VFit() {
       const timeoutId = setTimeout(() => controller.abort(), 900000); // 15 minutes
 
       try {
-        const response = await fetch(url, {
+        const response = await fetch('/api/tryon', {
           method: 'POST',
           body: formData,
-          mode: 'cors',
-          signal: controller.signal,
-          headers: {
-            'Authorization': 'Bearer rpa_Y7FQEAI7I34VOTQRGSZY38CG812HKYRQDNX8TGED6zui22'
-          }
+          signal: controller.signal
         });
 
         clearTimeout(timeoutId);
