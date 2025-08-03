@@ -1,0 +1,42 @@
+{
+  "name": "splendor",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.0",
+    "@tensorflow-models/body-pix": "latest",
+    "@tensorflow/tfjs": "latest",
+    "@vercel/speed-insights": "^1.2.0",
+    "axios": "latest",
+    "flowbite-react": "^0.10.2",
+    "fs": "^0.0.1-security",
+    "jspdf": "^3.0.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-spinners": "^0.13.8",
+    "react-webcam": "latest",
+    "sass": "^1.69.7",
+    "web-vitals": "latest"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,437 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #11151d;
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-header h1 {
+  color: #61dafb; /* Light blue color, similar to React's default logo color */
+  margin-bottom: 0.5em; /* Adds some space below the heading */
+  font-size: 2.5em; /* Larger font size for heading */
+}
+
+.App-header p {
+  color: #adb5bd; /* Light gray color for the paragraph */
+  font-size: 1.2em; /* Larger font size for readability */
+  max-width: 80%; /* Restricts the maximum width of the paragraph */
+  /*margin: 20px auto; /* Centers the paragraph and adds vertical spacing */
+  line-height: 1.6; /* Improves readability by increasing line height */
+}
+
+.modal-form {
+  max-width: 800px;
+  margin: 2rem ;
+  padding: 2rem;
+  background-color: #fff;
+  border:  1.5px solid #AE8422;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-width: 1px;
+}
+
+/* Title Styling */
+.form-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: #222836; /* Ensure this color is correctly applied */
+    margin-bottom: 2rem;
+    font-weight: bold; /* Ensure the title stands out */
+}
+
+.form-title span {
+  font-weight: bold;
+  color: #222836; /* Red color for countdown */
+  font-size: 3rem; /* Larger font size for the countdown */
+}
+
+.height-form-guide-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: #222836; /* Ensure this color is correctly applied */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+.unit-selector label {
+  margin-right: 20px;
+  font-size: 16px;
+  color: #222836;
+}
+
+/* Description Styling */
+.form-description {
+  font-family: "Oswald", sans-serif;
+  color: #172B52;
+  margin-bottom: 1%;
+  text-align: center; /* Center the description */
+  font-size: 1.125rem; /* Adjust font size if needed */
+}
+
+.height-form-description{
+  margin-top:0;
+  font-family: "Oswald", sans-serif;
+  color: #172B52;
+  margin-bottom: 1%;
+  text-align: start; /* Center the description */
+  font-size: 1.125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-form{
+      margin:1rem;
+      padding: 1rem;
+  }
+  .height-form-guide-title{
+      font-size: 14px; /* Adjust font size if needed */
+  }
+  .height-form-description{
+      padding-left: 15px;
+      font-size: 0.8rem; /* Adjust font size if needed */
+  }
+
+}
+
+/* Label and Input Styling */
+.form-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #222836;
+  margin-top: 1.6rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #222836;;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  color: #222836;
+  margin-top: 1.6rem;
+  box-sizing: border-box;
+  border-color: #AE8422;
+}
+
+.form-input::placeholder {
+  color: #222836; /* Light gray placeholder text */
+}
+
+.form-input:focus {
+  border-color: #AE8422; /* Yellow border on focus */
+  outline: none;
+}
+
+/* Button Styling */
+.height-button {
+  margin-top: 1.6rem;
+  width: 40%;
+  padding: 1rem;
+  background-color: #AE8422; /* Yellow background */
+  color: white;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.height-button:hover {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: white;
+  border: 1.5px solid #AE8422;
+  color: #222836; /* Darker yellow on hover */
+}
+
+.continue-button {
+  width: 40%;
+  padding: 1rem;
+  background-color: #AE8422; /* Yellow background */
+  color: white;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.6rem;
+}
+
+.continue-button:hover {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: white;
+  border: 1.5px solid #AE8422;
+  color: #222836; /* Optional: to match the text color with the border */
+}
+
+.save-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #AE8422; /* Yellow background */
+  color: white;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: white;
+  border: 1.5px solid #AE8422;
+  color: #222836; /* Optional: to match the text color with the border */
+}
+
+.unit-toggle-button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #222836; /* Yellow background */
+  color: white;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}  
+
+.unit-toggle-button:hover {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: white;
+  border: 1.5px solid #222836;
+  color: #222836; /* Optional: to match the text color with the border */
+}
+
+.webcam-container {
+  position: relative;
+  width: auto;
+  height: 80vh; /* Use viewport height */
+  display: flex;
+  aspect-ratio: 9/16;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.webcam {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  aspect-ratio: 9/16;
+}
+
+.webcam-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  aspect-ratio: 9/16;
+  z-index: 2;
+}
+
+.mask-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  pointer-events: none;
+  aspect-ratio: 9/16;
+}
+
+.guidance-msg {
+  z-index: 11;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: auto;
+  max-width: 90%;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.segmentation-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+video, canvas {
+  width: 100%; /* Full width for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Prevent distortion or stretching */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+@media screen and (max-width: 720px) {
+  .webcam-container {
+    height: 80vh;
+
+  }
+}
+
+/* Optional: Adjust App header for mobile */
+@media screen and (min-width: 768px) {
+  /* .App-header {
+    padding: 10px;
+  } */
+}
+
+.measurements {
+  display: flex;  /* Use flexbox to align children horizontally */
+  flex-wrap: nowrap;  /* Prevent wrapping of items */
+  justify-content: space-around;  /* Distribute space evenly around items */
+  align-items: center;  /* Vertically center items in the box */
+  overflow-x: auto;  /* Enable horizontal scrolling if needed */
+  width: 100%;  /* Full width to fit all items */
+  max-width: 100%;  /* Ensure it does not exceed the viewport width */
+  padding: 10px;
+  background: rgba(0,0,0,0.5);  /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 20px;  /* Add space above the measurement box */
+}
+
+.measurement-item {
+  white-space: nowrap;  /* Keep each measurement text on a single line */
+  color: #61dafb;  /* Light blue color for measurement text */
+  font-size: 1em;  /* Adjust font size as needed */
+  padding: 5px 15px;  /* Padding around each measurement for separation */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@media screen and (max-width: 426px) {
+  .continue-button {
+    width: 70%;
+  }
+  .form-button {
+    width: 80%;
+  }
+  .height-button {
+    margin-top: 0.7rem;
+    width: 80%;
+  }
+  .form-input{
+    margin-top:8px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .form-button {
+    width: 100%;
+  }
+  .continue-button {
+    width: 100%;
+  }
+  .height-button {
+
+    width: 100%;
+  }
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Note {
+  color: #ff0000;
+  stroke-width: 10;
+  font-style: inherit;
+  font-size: large;
+  text-decoration-line: underline;
+}
+
+.custom-alert {
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: top 0.3s ease-out;
+  width: 300px;
+  max-width: 90%;
+}
+
+.custom-alert.visible {
+  top: 20px; /* Slide in to this position */
+}
+
+.custom-alert-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-alert-message {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.custom-alert-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.custom-alert-button:hover {
+  background-color: #0056b3;
+}

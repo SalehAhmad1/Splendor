@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Add any custom styles below these directives */
+/* body {
+    background-color: #CBC5BC;
+} */
+
+@font-face {
+    font-family: 'SantaMonicaSans';
+    src: url('../public/SantaMonicaSans.otf');
+}
+
+@font-face {
+    font-family: 'TheGlorious';
+    src: url('../public/TheGlorious.otf');
+}
+
+@font-face {
+    font-family: 'Badmood';
+    src: url('../public/Badmood.ttf');
+}
+
+@font-face {
+    font-family: 'HeavenScent';
+    src: url('../public/HEAVENSCENT.ttf');
+}
+
+@keyframes color-change {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: purple; }
+    100% { color: red; }
+  }
+
+  .animate-color-change {
+    animation: color-change 5s infinite;
+  }
+
+  @keyframes color-change-and-bounce {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: purple; }
+    100% { color: red; }
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+}
+.animate-color-change-and-bounce {
+    animation: color-change-and-bounce 1s infinite;
+}
+
+@keyframes color-change-and-pulse {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: purple; }
+    100% { color: red; }
+    50% {
+        opacity: .5;
+    }
+}
+.animate-color-change-and-pulse {
+    animation: color-change-and-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
