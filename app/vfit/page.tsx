@@ -12,7 +12,7 @@ export default function VFit() {
   // const url = 'https://5249-182-183-104-247.ngrok-free.app/try_dual';
   // const url = 'http://13.234.44.185:5000/try_dual';
   // const url = 'https://13.234.44.185/try_dual';
-  const url = 'https://splendor.13.234.44.185.nip.io/try_dual';
+  const url = 'https://dsru466g0fylrq-5000.proxy.runpod.net/try_dual';
   const [modelImageFile, setModelImageFile] = useState<File | null>(null);
   const [outputImage, setOutputImage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -62,13 +62,11 @@ export default function VFit() {
         const response = await fetch(url, {
           method: 'POST',
           body: formData,
-          // This meta header tells modern browsers to try allowing mixed content
-          // headers: {
-          //   'Access-Control-Allow-Origin': '*',
-          // },
-          // Force non-secure requests 
           mode: 'cors',
-          signal: controller.signal
+          signal: controller.signal,
+          headers: {
+            'Authorization': 'Bearer rpa_Y7FQEAI7I34VOTQRGSZY38CG812HKYRQDNX8TGED6zui22'
+          }
         });
 
         clearTimeout(timeoutId); // Clear timeout on successful fetch
