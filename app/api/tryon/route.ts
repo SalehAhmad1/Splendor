@@ -4,11 +4,11 @@ export async function POST(req: NextRequest) {
   const formData = await req.formData();
 
   try {
-    const response = await fetch('https://dsru466g0fylrq-5000.proxy.runpod.net/try_dual', {
+    const response = await fetch('https://h82tkjofd7oazs-5000.proxy.runpod.net/try_dual', {
       method: 'POST',
       body: formData,
       headers: {
-        'Authorization': 'Bearer rpa_Y7FQEAI7I34VOTQRGSZY38CG812HKYRQDNX8TGED6zui22'
+        'Authorization': 'Bearer rpa_C2OMPENESTKX3UI7S1HQJPVUMSKIZZYMPS9SMJJEpuh0gn'
       }
     });
 
