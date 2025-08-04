@@ -4,7 +4,7 @@ export async function POST(req: NextRequest) {
   const formData = await req.formData();
 
   try {
-    const response = await fetch('https://h82tkjofd7oazs-5000.proxy.runpod.net/try_dual', {
+    const response = await fetch('https://7njlzqz8mkmnxi-5000.proxy.runpod.net/try_dual', {
       method: 'POST',
       body: formData,
       headers: {
